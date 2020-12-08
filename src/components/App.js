@@ -19,16 +19,19 @@ class App extends React.Component {
     this.getYouTubeVideos('react tutorials');
   }
 
+  // This may need handler
   handleVideoListEntryTitleClick(video) {
     this.setState({currentVideo: video});
   }
 
+  // This may need handler (uncertain, since searchYouTube)
   getYouTubeVideos(query) {
     var options = {
       key: this.props.API_KEY,
       query: query
     };
 
+    // This may need handler (searchYouTube)
     this.props.searchYouTube(options, (videos) =>
       this.setState({
         videos: videos,
