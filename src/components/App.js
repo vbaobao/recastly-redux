@@ -40,6 +40,13 @@ class App extends React.Component {
     );
   }
 
+  // handleSearchInputChange (e) {
+  //   this.getYouTubeVideos(e.target.value);
+  //   this.setState({
+  //     value: e.target.value
+  //   });
+  // }
+
   //TODO: swap out the React components below for the container components
   //  you wrote in the 'containers' directory.
   render() {
