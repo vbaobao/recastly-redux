@@ -1,6 +1,6 @@
 import React from 'react';
 
- 
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -35,3 +35,21 @@ class Search extends React.Component {
 }
 
 export default Search;
+
+
+// class DebounceSamples extends React.Component {
+//   constructor(props) {
+//     super(props);
+
+//     // Method defined in constructor, alternatively could be in another lifecycle method
+//     // like componentWillMount
+//     this.search = _.debounce(e => {
+//       console.log('Debounced Event:', e);
+//     }, 1000);
+//   }
+
+//   // Define the method directly in your class
+//   search = _.debounce((e) => {
+//     console.log('Debounced Event:', e);
+//   }, 1000)
+// }

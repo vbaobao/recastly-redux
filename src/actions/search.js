@@ -9,7 +9,10 @@ var handleVideoSearch = (q) => {
   //TODO:  Write an asynchronous action to handle a video search!
   //TODO: debounce, searchYouTube
   var handleSearch = () => (
-    {type: 'SEARCH', payload: searchYouTube({key: YOUTUBE_API_KEY, q: q}, (data) => VideoListContainer(data.items))}
+    {
+      type: 'SEARCH',
+      payload: searchYouTube({key: YOUTUBE_API_KEY, q: q}, (data) => VideoListContainer(data.items))
+    }
   )
   return handleSearch;
 };
@@ -18,5 +21,3 @@ var handleVideoSearch = (q) => {
 //   console.log('stuff')
 // }
 export default handleVideoSearch;
-
-
