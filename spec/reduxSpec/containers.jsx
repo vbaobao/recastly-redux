@@ -43,6 +43,7 @@ describe('containers', function() {
       store.dispatch.reset();
     });
     it('should have a prop called handleVideoListEntryTitleClick which dispatches changeVideo', function() {
+      console.log(component.props())
       component.props().handleVideoListEntryTitleClick({ script: 'I like traffic lights.'});
       expect(component.props().handleVideoListEntryTitleClick).to.be.a('function');
       expect(store.dispatch.callCount).to.equal(1);
