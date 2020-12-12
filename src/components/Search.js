@@ -9,13 +9,6 @@ class Search extends React.Component {
     };
   }
 
-  handleInputChange(e) {
-    this.props.getYouTubeVideos(e.target.value);
-    this.setState({
-      value: e.target.value
-    });
-  }
-
   render() {
     return (
       <div className="search-bar form-inline">
@@ -23,7 +16,7 @@ class Search extends React.Component {
           className="form-control"
           type="text"
           value={this.state.value}
-          onChange={this.handleInputChange.bind(this)}
+          onChange={this.props.handleSearchInputChange}
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>
@@ -34,21 +27,3 @@ class Search extends React.Component {
 }
 
 export default Search;
-
-
-// class DebounceSamples extends React.Component {
-//   constructor(props) {
-//     super(props);
-
-//     // Method defined in constructor, alternatively could be in another lifecycle method
-//     // like componentWillMount
-//     this.search = _.debounce(e => {
-//       console.log('Debounced Event:', e);
-//     }, 1000);
-//   }
-
-//   // Define the method directly in your class
-//   search = _.debounce((e) => {
-//     console.log('Debounced Event:', e);
-//   }, 1000)
-// }

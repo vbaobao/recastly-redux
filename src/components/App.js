@@ -4,50 +4,10 @@ import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
 import SearchContainer from '../containers/SearchContainer.js';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      videos: [],
-      currentVideo: null
-    };
-    this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
-  }
-
   componentDidMount() {
-    this.getYouTubeVideos('react tutorials');
+    props.searchYouTube(props.API_KEY, 'react tutorials');
   }
 
-  // This may need handler
-  handleVideoListEntryTitleClick(video) {
-    this.setState({currentVideo: video});
-  }
-
-  // This may need handler (uncertain, since searchYouTube)
-  getYouTubeVideos(query) {
-    var options = {
-      key: this.props.API_KEY,
-      query: query
-    };
-
-    // This may need handler (searchYouTube)
-    this.props.searchYouTube(options, (videos) =>
-      this.setState({
-        videos: videos,
-        currentVideo: videos[0]
-      })
-    );
-  }
-
-  // handleSearchInputChange (e) {
-  //   this.getYouTubeVideos(e.target.value);
-  //   this.setState({
-  //     value: e.target.value
-  //   });
-  // }
-
-  //TODO: swap out the React components below for the container components
-  //  you wrote in the 'containers' directory.
   render() {
     return (
       <div>

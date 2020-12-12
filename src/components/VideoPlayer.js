@@ -1,7 +1,7 @@
 import React from 'react';
 
 var VideoPlayer = ({video}) => (
-  !video
+  !video || JSON.stringify(video) === '{}'
     ? <div className="video-player">Please wait...</div>
     : <div className="video-player">
       <div className="embed-responsive embed-responsive-16by9">

@@ -6,8 +6,6 @@ import videoList from '../components/VideoList.js';
 import VideoListContainer from '../containers/VideoListContainer.js';
 
 var handleVideoSearch = (q) => {
-  //TODO:  Write an asynchronous action to handle a video search!
-  //TODO: debounce, searchYouTube
   var handleSearch = () => (
     {
       type: 'SEARCH',
@@ -17,7 +15,4 @@ var handleVideoSearch = (q) => {
   return handleSearch;
 };
 
-// var handleSearchChange = (e) => {
-//   console.log('stuff')
-// }
 export default handleVideoSearch;
