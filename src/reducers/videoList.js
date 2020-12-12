@@ -5,10 +5,7 @@ const initialState = [];
 var videoListReducer = (state = initialState, action) => {
   //TODO: define a reducer for the videoList field of our state.
   if (action.type === 'CHANGE_VIDEO_LIST') {
-    return {
-      ...state,
-      videoList: action.videos
-    }
+    return action.videos;
   }
   return state;
 };

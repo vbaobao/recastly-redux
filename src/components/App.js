@@ -4,8 +4,11 @@ import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
 import SearchContainer from '../containers/SearchContainer.js';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
-    props.searchYouTube(props.API_KEY, 'react tutorials');
+    this.props.searchYouTube({key: this.props.API_KEY, query:'react tutorials'});
   }
 
   render() {

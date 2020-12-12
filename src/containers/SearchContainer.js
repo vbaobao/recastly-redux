@@ -3,7 +3,7 @@ import Search from './../components/Search.js';
 import handleVideoSearch from '../actions/search.js';
 
 const mapDispatchToProps = (dispatch) => {
-  return { handleSearchInputChange: (e) => dispatch(handleVideoSearch(e.target.value))};
+  return { handleSearchInputChange: () => dispatch(handleVideoSearch)};
 }
 
 var SearchContainer = connect(null, mapDispatchToProps)(Search)
