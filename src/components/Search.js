@@ -1,4 +1,5 @@
 import React from 'react';
+import store from '../store/store.js';
 
 class Search extends React.Component {
   constructor(props) {
@@ -9,14 +10,18 @@ class Search extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.props.handleSearchInputChange('react tutorials');
+  }
+
   render() {
     return (
       <div className="search-bar form-inline">
         <input
           className="form-control"
           type="text"
-          value={this.state.value}
-          onChange={this.props.handleSearchInputChange}
+          // value={this.state.value}
+          onChange={(e) => (this.props.handleSearchInputChange(e.target.value))}
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>

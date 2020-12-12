@@ -2,18 +2,8 @@ import React from 'react';
 import VideoListContainer from '../containers/VideoListContainer.js';
 import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
 import SearchContainer from '../containers/SearchContainer.js';
-import handleVideoSearch from '../actions/search.js';
-
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount() {
-    //Dispatch is not functional, how does it pass to state.
-    dispatch(handleVideoSearch('react tutorials'));
-  }
-
   render() {
     return (
       <div>

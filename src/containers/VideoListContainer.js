@@ -3,7 +3,7 @@ import VideoList from './../components/VideoList.js';
 import changeVideo from './../actions/currentVideo.js';
 
 const mapDispatchToProps = (dispatch) => {
-  return { handleVideoListEntryTitleClick: () => dispatch(changeVideo) }
+  return { handleVideoListEntryTitleClick: (video) => dispatch(changeVideo(video)) }
 }
 
 const mapStateToProps = (state) => {
