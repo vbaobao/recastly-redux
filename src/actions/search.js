@@ -9,7 +9,7 @@ var handleVideoSearch = (q) => {
       dispatch(changeVideoList(items));
       dispatch(changeVideo(items[0]));
     });
-  }, 500, {leading: true});
+  }, 1000, {leading: true});
 };
 
 export default handleVideoSearch;
