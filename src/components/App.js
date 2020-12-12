@@ -10,6 +10,7 @@ class App extends React.Component {
     super(props);
   }
   componentDidMount() {
+    //Dispatch is not functional, how does it pass to state.
     dispatch(handleVideoSearch('react tutorials'));
   }
 
