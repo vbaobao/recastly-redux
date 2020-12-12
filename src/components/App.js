@@ -8,7 +8,9 @@ class App extends React.Component {
     super(props);
   }
   componentDidMount() {
-    this.props.searchYouTube({key: this.props.API_KEY, query:'react tutorials'});
+    this.props.searchYouTube({key: this.props.API_KEY, query:'react tutorials'},
+      (items) => (console.log(items)));
+    console.log(this.props.store);
   }
 
   render() {
